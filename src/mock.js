@@ -31,10 +31,6 @@ export function getPageData() {
       category_id: 150,
       page_main_gallery: ["/vercel.svg"],
       page_main_gallery_mobile: ["/warehouse/2050548"],
-      page_main_gallery_headline: "page_main_gallery_headline",
-      page_main_gallery_subheadline: "page_main_gallery_subheadline",
-      page_main_gallery_title_as_h1: false,
-      page_main_gallery_subheadline_as_h2: false,
       page_info: {
         title: "homepage-title",
         subtitle: "homepage-subtitle",
