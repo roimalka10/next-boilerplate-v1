@@ -155,8 +155,8 @@ export function getPageData() {
       page_main_gallery_mobile: ["/warehouse/2050548"],
       page_main_gallery_headline: "content_main_gallery_headline",
       page_main_gallery_subheadline: "content_main_gallery_subheadline",
-      page_main_gallery_title_as_h1: true,
-      page_main_gallery_subheadline_as_h2: true,
+      page_main_gallery_title_as_h1: false,
+      page_main_gallery_subheadline_as_h2: false,
       page_info: {
         title: "content-title",
         subtitle: "content-subtitle",
