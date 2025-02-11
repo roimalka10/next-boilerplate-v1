@@ -1,16 +1,24 @@
-import { getPages, getPageData } from "../mock";
+export const fetchPages = async () => {
+  try {
+    const response = await fetch(`http://localhost:5000/pages`);
+    const pages = await response.json();
+    return pages;
+  } catch (error) {
+    console.error("Error fetching pages:", error);
+    return null;
+  }
+};
 
 export const fetchPageBySlug = async (slug) => {
   try {
-    const pages = getPages(); // ✅ Get all pages from mock API
+    const response = await fetch("http://localhost:5000/pages");
+    const page = await response.json();
 
     if (!slug || slug === "") {
-      // ✅ If slug is empty, return the home page
-      return pages.find((p) => p.category_url === "/") || null;
+      return page.find((p) => p.category_url === "/") || null;
     }
 
-    // ✅ Find the correct page for other URLs
-    return pages.find((p) => p.category_url === `/${slug}`) || null;
+    return page.find((p) => p.category_url === `/${slug}`) || null;
   } catch (error) {
     console.error("Error fetching page:", error);
     return null;
@@ -19,10 +27,9 @@ export const fetchPageBySlug = async (slug) => {
 
 export const fetchPageData = async (categoryId) => {
   try {
-    const pagesData = getPageData(); // Now it's an array
-
-    // ✅ Find the correct page data by category_id
-    return pagesData.find((p) => p.category_id === categoryId) || null;
+    const response = await fetch(`http://localhost:5000/pages/${categoryId}`);
+    const pagesData = await response.json();
+    return pagesData;
   } catch (error) {
     console.error("Error fetching page content:", error);
     return null;

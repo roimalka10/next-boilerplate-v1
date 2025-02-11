@@ -5,6 +5,7 @@ export function getPages() {
       category_parent: false,
       category_name: "home page",
       category_url: "/",
+      category_class: null,
       show_on_header: true,
     },
     {
@@ -12,6 +13,7 @@ export function getPages() {
       category_parent: 195,
       category_name: "lobby page",
       category_url: "/lobby-page",
+      category_class: null,
       show_on_header: true,
     },
     {
@@ -19,6 +21,7 @@ export function getPages() {
       category_parent: false,
       category_name: "content page",
       category_url: "/content-page",
+      category_class: "is-blog-page",
       show_on_header: true,
     },
   ];
@@ -43,8 +46,6 @@ export function getPageData() {
           type: "gridboxes",
           title: "homepage grid",
           id: 1,
-          "id-custom": 15,
-          "is-custom": true,
           status: true,
           content_childrens: [
             {
@@ -104,9 +105,8 @@ export function getPageData() {
           type: "gridboxes",
           title: "lobby grid",
           id: 1,
-          "id-custom": 15,
-          "is-custom": true,
           status: true,
+          class: "",
           content_childrens: [
             {
               type: "gridbox",
@@ -165,8 +165,6 @@ export function getPageData() {
           type: "gridboxes",
           title: "content section",
           id: 1,
-          "id-custom": 15,
-          "is-custom": true,
           status: true,
           content_childrens: [
             {
