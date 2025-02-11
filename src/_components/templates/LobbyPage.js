@@ -3,9 +3,9 @@ import gridsMap from "../GridsMap";
 import LobbyView from "../grids/LobbyView";
 import GridTop from "../grids/GridTop";
 
-export default function LobbyPage({ pageData }) {
+export default function LobbyPage({ className, pageData }) {
   return (
-    <div className="lobby-page">
+    <div className={"lobby-page" + (className ? ` ${className}` : "")}>
       {pageData.page_main_gallery && (
         <GridTop
           page_main_gallery={pageData.page_main_gallery}
