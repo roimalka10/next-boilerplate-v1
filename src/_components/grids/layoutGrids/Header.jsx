@@ -14,9 +14,11 @@ const Header = ({ pagesPromise }) => {
           {pages
             .filter((page) => page.show_on_header)
             .map((page) => {
-              const isActive = pathname === page.category_url;
               return (
-                <li className={isActive ? "active" : ""} key={page.category_id}>
+                <li
+                  className={`${pathname === page.category_url ? "active" : ""}`}
+                  key={page.category_id}
+                >
                   <Link href={page.category_url}>{page.category_name}</Link>
                 </li>
               );
