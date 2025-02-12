@@ -5,10 +5,10 @@ import GridRows from "./contentGrids/GridRows";
 import GridRow from "./contentGrids/GridRow";
 
 const gridsMap = {
-    gridboxes: (props) => <GridBoxes {...props} />,
-    gridbox: (props) => <GridBox {...props} />,
-    gridrows: (props) => <GridRows {...props} />,
-    gridrow: (props) => <GridRow {...props} />,
+  gridboxes: (props) => <GridBoxes {...props} />,
+  gridbox: (props) => <GridBox {...props} />,
+  gridrows: (props) => <GridRows {...props} />,
+  gridrow: (props) => <GridRow {...props} />,
 };
 
 export default gridsMap;
