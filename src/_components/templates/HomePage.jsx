@@ -1,5 +1,6 @@
 import React from "react";
 import gridsMap from "../grids/GridsMap";
+import parse from "html-react-parser";
 
 export default function HomePage({ pageData }) {
   const { page_main_gallery, page_info, page_contents } = pageData;
@@ -19,7 +20,7 @@ export default function HomePage({ pageData }) {
         </div>
         {page_info.title && <h1>{page_info.title}</h1>}
         {page_info.subtitle && <h2>{page_info.subtitle}</h2>}
-        {page_info.text && <div className="text-container">{page_info.text}</div>}
+        {page_info.text && <div className="text-container">{parse(page_info.text)}</div>}
       </div>
 
       <div id="allSectionsWrapper">
