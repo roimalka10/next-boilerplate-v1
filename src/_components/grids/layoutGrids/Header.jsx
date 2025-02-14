@@ -10,7 +10,10 @@ const Header = ({ pagesPromise }) => {
   return (
     <header className="header">
       <nav>
-        <ul>
+        <div className="header-logo">
+          <img src="assets/header-logo.svg" />
+        </div>
+        <ul className="header-menu">
           {pages
             .filter((page) => page.show_on_header)
             .map((page) => {
