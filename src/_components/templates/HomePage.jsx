@@ -8,16 +8,18 @@ export default function HomePage({ pageData }) {
   return (
     <div className="home-page">
       <div id="hero-gallery">
-        <div className="gallery-images">
-          {page_main_gallery.map((image, index) => (
-            <img
-              className={`gallery-image gallery-image-${index + 1}`}
-              key={index}
-              src={image}
-              alt={`Gallery Image ${index + 1}`}
-            />
-          ))}
-        </div>
+        {page_main_gallery && page_main_gallery.length > 0 && (
+          <div className="gallery-images">
+            {page_main_gallery.map((image, index) => (
+              <img
+                className={`gallery-image gallery-image-${index + 1}`}
+                key={index}
+                src={image}
+                alt={`Gallery Image ${index + 1}`}
+              />
+            ))}
+          </div>
+        )}
         {page_info.title && <h1>{page_info.title}</h1>}
         {page_info.subtitle && <h2>{page_info.subtitle}</h2>}
         {page_info.text && <div className="text-container">{parse(page_info.text)}</div>}
