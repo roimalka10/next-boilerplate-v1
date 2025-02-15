@@ -13,7 +13,6 @@ export default function HeaderHeightProvider() {
 
     setHeaderHeight();
     window.addEventListener("resize", setHeaderHeight);
-
     return () => window.removeEventListener("resize", setHeaderHeight);
   }, []);
 

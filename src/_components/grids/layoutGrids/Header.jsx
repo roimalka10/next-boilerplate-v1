@@ -1,4 +1,5 @@
 "use client";
+
 import React, { use } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -10,7 +11,7 @@ const Header = ({ pagesPromise }) => {
   return (
     <header className="header">
       <nav>
-        <ul>
+        <ul className="header-menu">
           {pages
             .filter((page) => page.show_on_header)
             .map((page) => {
