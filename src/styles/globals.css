@@ -115,6 +115,7 @@ header .header-logo img {
 }
 
 #hero-gallery {
+  min-height: 90svh;
   height: calc(var(--app-height) - var(--headerHeight));
   display: flex;
   flex-direction: column;
