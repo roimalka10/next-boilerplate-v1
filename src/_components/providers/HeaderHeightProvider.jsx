@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function HeaderHeightProvider() {
+const HeaderHeightProvider = () => {
   useEffect(() => {
     function setHeaderHeight() {
       const header = document.querySelector("header");
@@ -17,4 +17,6 @@ export default function HeaderHeightProvider() {
   }, []);
 
   return null;
-}
+};
+
+export default HeaderHeightProvider;
