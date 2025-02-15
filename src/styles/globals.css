@@ -119,64 +119,10 @@ header .header-logo img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: var(--gap-72);
-}
-
-#hero-gallery h1 {
-  font-size: var(--gap-32);
-}
-
-#hero-gallery .text-container h2 {
-  font-size: var(--gap-96);
-  font-weight: 400;
-  font-style: italic;
-}
-
-#hero-gallery .text-container h2 strong {
-  font-style: normal;
-}
-
-@media (max-width: 1024px) {
-  #hero-gallery {
-    gap: var(--gap-40);
-  }
-
-  #hero-gallery h1 {
-    font-size: var(--gap-18);
-  }
-
-  #hero-gallery .text-container h2 {
-    font-size: var(--gap-56);
-  }
-}
-
-#lobbyView {
-  margin-block: var(--gap-40);
 }
 
 #allSectionsWrapper {
   flex-grow: 1;
-}
-
-.grid-boxes-section .grid-boxes {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-20);
-}
-
-@media (max-width: 1024px) {
-  .grid-boxes-section .grid-boxes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.grid-boxes-section .grid-boxes .grid-box {
-  border: 1px solid #fff;
-  padding: var(--gap-20);
-}
-
-.blue-bg-sec .grid-boxes .grid-box {
-  background: #4c74a9;
 }
 
 section {
@@ -187,30 +133,41 @@ section {
   padding: 0 var(--gap-180) var(--gap-40);
 }
 
-.red-bg-sec .grid-rows {
+.grid-boxes-section .grid-boxes {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: var(--gap-20);
 }
 
-@media (max-width: 1024px) {
-  .red-bg-sec .grid-rows {
-    grid-template-columns: repeat(2, 1fr);
-  }
+.grid-boxes-section .grid-boxes .grid-box {
+  border: 1px solid #fff;
+  padding: var(--gap-20);
 }
 
 .grid-boxes-section .grid-boxes .grid-box .grid-box-image img {
   width: var(--gap-56);
 }
 
+.blue-bg-sec .grid-boxes .grid-box {
+  background: #4c74a9;
+}
+
+@media (max-width: 1024px) {
+  .grid-boxes-section .grid-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.grid-rows-section .grid-rows {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-20);
+}
+
 .grid-rows-section .grid-rows .grid-row {
   border: 1px solid #fff;
   display: flex;
   gap: var(--gap-20);
-}
-
-.red-bg-sec .grid-rows .grid-row {
-  background: #934c4c;
 }
 
 .grid-rows-section .grid-rows .grid-row .grid-row-inner {
@@ -227,4 +184,14 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.red-bg-sec .grid-rows .grid-row {
+  background: #934c4c;
+}
+
+@media (max-width: 1024px) {
+  .grid-rows-section .grid-rows {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
