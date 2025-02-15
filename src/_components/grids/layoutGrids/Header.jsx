@@ -1,12 +1,10 @@
 "use client";
 
-import React, { use } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const Header = ({ pagesPromise }) => {
+const Header = ({ pages }) => {
   const pathname = usePathname();
-  const pages = use(pagesPromise);
 
   return (
     <header className="header">

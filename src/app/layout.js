@@ -5,14 +5,14 @@ import { fetchPages } from "@/_lib/api";
 import ClientProviders from "@/_components/providers/ClientProviders";
 
 export default async function RootLayout({ children }) {
-  const pages = fetchPages();
+  const pages = await fetchPages();
 
   return (
     <html lang="en">
       <head />
       <body>
         <ClientProviders />
-        <Header pagesPromise={pages} />
+        <Header pages={pages} />
         {children}
         <Footer />
       </body>
