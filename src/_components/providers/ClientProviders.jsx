@@ -1,5 +1,3 @@
-"use client";
-
 import HeaderHeightProvider from "./HeaderHeightProvider";
 import WindowSizeProvider from "./WindowSizeProvider";
 

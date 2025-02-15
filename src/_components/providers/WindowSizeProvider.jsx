@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function WindowSizeProvider() {
+const WindowSizeProvider = () => {
   useEffect(() => {
     function updateWindowSize() {
       document.documentElement.style.setProperty("--app-width", `${window.innerWidth}px`);
@@ -15,4 +15,6 @@ export default function WindowSizeProvider() {
   }, []);
 
   return null;
-}
+};
+
+export default WindowSizeProvider;
