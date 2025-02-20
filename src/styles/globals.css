@@ -17,6 +17,7 @@
   --gap-140: 7.292vw;
   --gap-180: 9.375vw;
   --gap-260: 13.542vw;
+  --grid-min-col-size: 16vw;
   --black: #171717;
   --red: #ff3227;
   --blue: #30a7fa;
@@ -136,7 +137,10 @@ section {
 
 .grid-boxes-section .grid-boxes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat
+  (auto-fill, minmax(min(
+  var(--grid-min-col-size), 100%), 1fr));
   gap: var(--gap-20);
 }
 
@@ -155,13 +159,16 @@ section {
 
 @media (max-width: 1024px) {
   .grid-boxes-section .grid-boxes {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 }
 
 .grid-rows-section .grid-rows {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, 1fr); */
+  grid-template-columns: repeat
+  (auto-fill, minmax(min(
+  var(--grid-min-col-size), 100%), 1fr));
   gap: var(--gap-20);
 }
 
@@ -193,6 +200,6 @@ section {
 
 @media (max-width: 1024px) {
   .grid-rows-section .grid-rows {
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 }
