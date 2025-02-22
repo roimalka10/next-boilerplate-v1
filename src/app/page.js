@@ -11,7 +11,7 @@ export default async function Home() {
   }
 
   switch (pageData.page_type) {
-    case "homepage":
+    case "home":
       return <HomePage pageData={pageData} />;
     default:
       return <div>Page type not supported.</div>;
